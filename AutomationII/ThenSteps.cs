@@ -20,7 +20,6 @@ namespace AutomationII
         [Then("After calculation result is equal to $result")]
         public void ThenResultOfCalculationEquals(int result)
         {
-            NUnit.Framework.Assert.IsNull("abc");
             Console.WriteLine("The result of calculation equals: " + result);
         }
     }

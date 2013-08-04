@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
 using NBehave.Narrator.Framework.Hooks;
 
 namespace AutomationII
@@ -17,16 +18,14 @@ namespace AutomationII
         [BeforeRun]
         public void BeforeRun()
         {
-            
-
-            // here goes webdriver initialization
+            BaseWebDriverSteps.Init();
             ImaginaryWebDriver = "ImaginaryWebDriver_" + new Random().Next(10000);
         }
 
         [AfterRun]
         public void AfterRun()
         {
-            // here goes webdriver teardown
+            BaseWebDriverSteps.TearDown();
             print("AfterRun, closing web driver -> " + ImaginaryWebDriver);
         }
 

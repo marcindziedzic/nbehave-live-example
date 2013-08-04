@@ -55,34 +55,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseWebDriverSteps.cs" />
-    <Compile Include="GivenSteps.cs" />
+    <Compile Include="Steps\BaseWebDriverSteps.cs" />
+    <Compile Include="Steps\GivenSteps.cs" />
     <Compile Include="GlobalHooks.cs" />
     <Compile Include="NBehaveEmbeddedRunner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThenSteps.cs" />
-    <Compile Include="WebDriverSteps.cs" />
-    <Compile Include="WhenSteps.cs" />
+    <Compile Include="Steps\ThenSteps.cs" />
+    <Compile Include="Steps\WebDriverSteps.cs" />
+    <Compile Include="Steps\WhenSteps.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="HelloWorldDuplicate.feature">
+    <None Include="Features\HelloWorld.feature">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="HelloWorld.feature">
+    <None Include="Features\HelloWorldDuplicate.feature">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Features\ParamsSpecification.feature">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Features\RealWebDriverSpecification.feature">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Features\SpecificationWithBackground.feature">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
-    <None Include="ParamsSpecification.feature">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="RealWebDriverSpecification.feature">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="SpecificationWithBackground.feature">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
